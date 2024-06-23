@@ -6,8 +6,8 @@ const app=express();
 
 app.use(cors({
     origin:'https://6677cb117ffbc44b51e235e6--playful-sundae-fdcd92.netlify.app',
-    Credential:true,
-    optionsSuccessStatus: 200,
+    // Credential:true,
+    // optionsSuccessStatus: 200,
     methods:'GET, HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders:['Content-Type', 'Authorization'],
 }));
