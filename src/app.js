@@ -13,7 +13,7 @@ const app=express();
 // }));
 
 const corsOptions = {
-    origin: 'https://6677cb117ffbc44b51e235e6--playful-sundae-fdcd92.netlify.app', // Replace with your Netlify URL
+    origin: 'https://dkecommerce.netlify.app/', // Replace with your Netlify URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Allow credentials
     allowedHeaders: ['Content-Type', 'Authorization'], // Adjust headers as needed
