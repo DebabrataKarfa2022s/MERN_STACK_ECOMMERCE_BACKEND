@@ -13,7 +13,8 @@ const app=express();
 // }));
 
 const corsOptions = {
-    origin: 'https://dkecommerce.netlify.app/', // Replace with your Netlify URL
+    // origin: 'https://dkecommerce.netlify.app/', // Replace with your Netlify URL
+    origin: '*', // Replace with your Netlify URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Allow credentials
     allowedHeaders: ['Content-Type', 'Authorization'], // Adjust headers as needed
