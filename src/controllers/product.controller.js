@@ -104,7 +104,7 @@ const getCategoryWiseProductController=asyncHandler(async(req,res)=>{
 const getCategoryProductOneController=asyncHandler(async(req,res)=>{
     try {
         const productCategory=await ProductModel.distinct("category");
-        console.log("productCategory",productCategory);
+        // console.log("productCategory",productCategory);
 
         // array to sotre one product from each category 
 

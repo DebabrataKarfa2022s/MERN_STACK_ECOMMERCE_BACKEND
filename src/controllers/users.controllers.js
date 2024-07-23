@@ -116,12 +116,12 @@ const loginUser=asyncHandler(async(req,res)=>{
 const userDetails=asyncHandler(async(req,res)=>{
 
    try {
-    // console.log("req.userId = ",req.userId);
+    console.log("req.userId = ",req.userId);
      const user= await UserModel.findById(req.userId).select("-password");
      res.status(200).json(
          new ApiResponse(200,user,"user details")
      )
-     console.log("user",user);
+     console.log("current user : ",user);
     }
     catch (error) {
         res.json({
