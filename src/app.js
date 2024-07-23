@@ -24,7 +24,7 @@ const corsOptions = {
   // app.use(cors());
   
   // Your routes here
-  // app.options('*', cors(corsOptions)); // Preflight requests
+  app.options('*', cors(corsOptions)); // Preflight requests
 
 
 app.use(express.json({limit:"16kb"}));
