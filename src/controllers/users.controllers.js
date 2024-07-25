@@ -309,7 +309,9 @@ const forgotPassword = asyncHandler(async (req, res) => {
         const payload = { _id: user._id };
         const token = jwt.sign(payload, process.env.TOKEN_SECRET_KEY, { expiresIn: "10m" });
 
-        const resetLink=`http://localhost:5173/reset-password/${user._id}/${token}`
+        // const resetLink=`http://localhost:5173/reset-password/${user._id}/${token}`
+        const resetLink=`https://mern-stack-ecommerce-frontend-1ynt.onrender.com/reset-password/${user._id}/${token}`
+        
         const userName=user.name
 
         const transporter = nodemailer.createTransport({
