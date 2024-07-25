@@ -135,7 +135,12 @@ const userDetails=asyncHandler(async(req,res)=>{
 
 const logOutUser=asyncHandler(async(req,res)=>{
     try {
-        res.clearCookie("token");
+        // res.clearCookie("token");
+        res.clearCookie("token", {
+            sameSite: 'None',
+            secure: true,
+            httpOnly: true,
+          });
         res.status(200).json(
             new ApiResponse(200,null,"logOut sucessfull")
         )
@@ -311,7 +316,7 @@ const forgotPassword = asyncHandler(async (req, res) => {
 
         // const resetLink=`http://localhost:5173/reset-password/${user._id}/${token}`
         const resetLink=`https://mern-stack-ecommerce-frontend-1ynt.onrender.com/reset-password/${user._id}/${token}`
-        
+
         const userName=user.name
 
         const transporter = nodemailer.createTransport({
